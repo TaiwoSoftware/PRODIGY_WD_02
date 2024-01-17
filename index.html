@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stopwatch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <!-- To build a stopwatch web application, you can use HTML,CSS and JavaScript.HTML to structure the elements of the application. By implementing functions for starting, pausing and resetting the stopwatch, as well as tracking and displaying lap times, user can accurately measure and record time intervals. With these technologies and functionalities, you can create an interactive and user-friendly stopwatch web application. -->
+    <main>
+      <h2>Stop watch</h2>
+      <div class="all">
+        <div class="timer-display">
+          <h1 id="timerDisplay">00:00:00</h1>
+        </div>
+        <div class="mainTime" id="mainTime">
+          
+          <input type="number" id="hours" maxlength="2" min="0" placeholder="Hours" value="0" />
+          <h2>:</h2>
+          <input
+            type="number"
+            id="minutes"
+            value="0"
+            maxlength="2"
+            placeholder="minutes"
+            min="0"
+          />
+          <h2>:</h2>
+          <input
+            type="number"
+            id="seconds"
+            maxlength="2"
+            value="0"
+            placeholder="Seconds"
+          />
+        </div>
+        <div class="functionality">
+          <button class="start" onclick="startTimer()" id="start">Start</button>
+          <button class="lap" onclick="lap()">Lap</button>
+          <button class="pause" onclick="pauseTimer()">Pause</button>
+          <button onclick="resumeTimer()" class="resume">resume</button>
+          <button class="reset" onclick="resetTimer()">Reset</button>
+          
+        </div>
+        
+        <ul id="lapList"></ul>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
